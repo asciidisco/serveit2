@@ -13,6 +13,7 @@
   },
   "scripts": {
     "test": "tape test.js",
+    "cover": "istanbul cover tape -- test.js",
     "lint": "eslint *.js",
     "styleguide": "jscs *.js",
     "ci": "npm run styleguide && npm run lint && npm test"
@@ -35,8 +36,10 @@
     "spdy-keys": "0.0.0"
   },
   "devDependencies": {
+    "codeclimate-test-reporter": "^0.1.1",
     "eslint": "^1.9.0",
     "ghooks": "^1.0.0",
+    "istanbul": "^0.4.0",
     "jscs": "^2.6.0",
     "tape": "^4.2.2",
     "validate-commit-message": "^3.0.1"

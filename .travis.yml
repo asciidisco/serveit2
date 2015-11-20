@@ -3,3 +3,4 @@ sudo: false
 node_js:
 - '5'
 script: npm run ci
+after_script: CODECLIMATE_REPO_TOKEN=5e879164abe4af8edb355a1acf71546887d45acc5da9d152cbe8a4dffc9efced node ./node_modules/codeclimate-test-reporter/bin/codeclimate.js < coverage/lcov.info
