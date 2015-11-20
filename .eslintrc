@@ -1,0 +1,22 @@
+{
+  "settings": {
+    "ecmascript": 5
+  },
+  "env": {
+    "node": 1,
+  },
+  "rules": {
+    "comma-dangle": [1, "always-multiline"],
+    "indent": [2, 2, {"SwitchCase": 1}],
+    "no-catch-shadow": 0,
+    "no-const-assign": 2,
+    "no-empty": 0,
+    "no-multi-spaces": 1,
+    "no-trailing-spaces": 1,
+    "no-underscore-dangle": 0,
+    "no-unused-expressions": 0,
+    "no-wrap-func": 0,
+    "quotes": [1, "single"],
+    "strict": 0
+  }
+}
