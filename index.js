@@ -1,3 +1,4 @@
+#! /usr/bin/env node
 var spdy = require('spdy');
 var keys = require('spdy-keys');
 var ecstatic = require('ecstatic');
