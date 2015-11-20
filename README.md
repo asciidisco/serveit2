@@ -1,6 +1,10 @@
 # serveit2
 Quick &amp; dirty static HTTP2 server
 
+[![Code Climate](https://codeclimate.com/github/asciidisco/serveit2/badges/gpa.svg)](https://codeclimate.com/github/asciidisco/serveit2)
+[![Test Coverage](https://codeclimate.com/github/asciidisco/serveit2/badges/coverage.svg)](https://codeclimate.com/github/asciidisco/serveit2/coverage)
+[![Issue Count](https://codeclimate.com/github/asciidisco/serveit2/badges/issue_count.svg)](https://codeclimate.com/github/asciidisco/serveit2)
+
 ## Installation
 
 ```
