@@ -7,6 +7,7 @@
   "preferglobal": true,
   "author": "Sebastian Golasch <public@asciidisco.com>",
   "license": "MIT",
+  "keywords": ["http2", "spdy", "server", "static"],
   "repository": {
     "type": "git",
     "url": "https://github.com/asciidisco/serveit2.git"
