@@ -5,7 +5,7 @@ var spdy = require('spdy');
 var http = require('https');
 
 // check if the server surfs correct status codes
-test('statusCode test', function (t) {
+test('statusCode test', function(t) {
   t.plan(1);
 
   var agent = spdy.createAgent({
@@ -15,7 +15,7 @@ test('statusCode test', function (t) {
     rejectUnauthorized: false,
   });
 
-  var server = serveit2({port: 7000, quiet: true}, function () {
+  var server = serveit2({port: 7000, quiet: true}, function() {
     http.get({
       host: 'localhost',
       path: '/README.md',
@@ -27,11 +27,10 @@ test('statusCode test', function (t) {
     }).end();
   });
 
-
 });
 
 // check if the server delivers correct contents
-test('contents test', function (t) {
+test('contents test', function(t) {
   t.plan(1);
 
   var agent = spdy.createAgent({
@@ -41,7 +40,7 @@ test('contents test', function (t) {
     rejectUnauthorized: false,
   });
 
-  var server = serveit2({port: 7000, quiet: true}, function () {
+  var server = serveit2({port: 7000, quiet: true}, function() {
     var contentsFromFile = fs.readFileSync(__dirname + '/README.md', 'utf8');
     http.get({
       host: 'localhost',
@@ -49,11 +48,11 @@ test('contents test', function (t) {
       path: '/README.md',
     }, function(res) {
       var contentsFromServer = '';
-      res.on('data', function (data) {
+      res.on('data', function(data) {
         contentsFromServer += data.toString();
       });
 
-      res.on('end', function () {
+      res.on('end', function() {
         t.equal(contentsFromServer, contentsFromFile);
         agent.close();
         server.close();

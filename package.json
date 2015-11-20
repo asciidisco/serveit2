@@ -12,7 +12,8 @@
   "scripts": {
     "test": "tape test.js",
     "lint": "eslint *.js",
-    "ci": "npm run lint && npm test"
+    "styleguide": "jscs *.js",
+    "ci": "npm run styleguide && npm run lint && npm test"
   },
   "author": "Sebastian Golasch <public@asciidisco.com>",
   "license": "MIT",
@@ -26,6 +27,7 @@
   },
   "devDependencies": {
     "eslint": "^1.9.0",
+    "jscs": "^2.6.0",
     "tape": "^4.2.2"
   }
 }

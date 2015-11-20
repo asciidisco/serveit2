@@ -56,17 +56,13 @@ var cli = meow(
   }
 );
 
-if (cli.flags.x) {
-  config = {};
-}
-
+if (cli.flags.x) config = {};
 options.port = cli.input[0] || config.port;
 options.gzip = cli.flags.g || config.gzip || false;
 options.push = config.push || {};
 options.quiet = cli.flags.q || config.quiet || false;
 options.root = cli.flags.r || config.root;
 
-//console.log(cli.input[0], cli.flags);
-serveit2(options, function (port) {
+serveit2(options, function(port) {
   console.log('Server listening at: https://localhost:%s', port);
 });

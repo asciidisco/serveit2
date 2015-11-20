@@ -5,7 +5,7 @@ var morgan = require('morgan');
 var mime = require('mime');
 var fs = require('fs');
 
-module.exports = function (options, cb) {
+module.exports = function(options, cb) {
   options = options || {};
   cb = typeof options === 'function' ? options : cb;
 
@@ -25,7 +25,7 @@ module.exports = function (options, cb) {
   };
 
   // dummy `logger` that prevents the script from outputting anything
-  var quietLogger = function (req, res, _cb) {
+  var quietLogger = function(req, res, _cb) {
     _cb();
   };
 
@@ -36,18 +36,19 @@ module.exports = function (options, cb) {
   var es = ecstatic({root: root});
 
   // default middleware (logging + static file server)
-  var middleware = function (req, res) {
+  var middleware = function(req, res) {
     var requestedFile = req.url.replace('/', '');
     if (requestedFile === '') requestedFile = 'index.html';
 
     // push resources
     if (options.push && options.push[requestedFile] && options.push[requestedFile].length > 0) {
-      options.push[requestedFile].forEach(function (file) {
+      options.push[requestedFile].forEach(function(file) {
         var stream = res.push(file, {
           request: { accept: '*/*'},
           response: {'content-type': mime.lookup(file)},
         });
         stream.on('error', console.error);
+
         try {
           var pushable = fs.readFileSync(root + file);
           stream.end(pushable);
@@ -58,14 +59,13 @@ module.exports = function (options, cb) {
       });
     }
 
-
-    logger(req, res, function (err) {
+    logger(req, res, function(err) {
       if (err) console.error(err);
-      es(req, res, typeof options.middleware === 'function' || function () {});
+      es(req, res, typeof options.middleware === 'function' || function() {});
     });
   };
 
   var server = spdy.createServer(spdyOpts, middleware);
-  server.listen(port, typeof cb === 'function' ? cb.bind(server, port) : function () {});
+  server.listen(port, typeof cb === 'function' ? cb.bind(server, port) : function() {});
   return server;
 };
