@@ -16,7 +16,7 @@
     "cover": "istanbul cover tape -- test.js",
     "lint": "eslint *.js",
     "styleguide": "jscs *.js",
-    "ci": "npm run styleguide && npm run lint && npm test"
+    "ci": "npm run styleguide && npm run lint && npm test && npm run cover"
   },
   "config": {
     "ghooks": {
