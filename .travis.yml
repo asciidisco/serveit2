@@ -12,3 +12,12 @@ script:
 after_success:
   - npm run report-cover
   - npm run semantic-release
+before_deploy:
+  - npm config set spin false --global
+deploy:
+  provider: npm
+  email: public@asciidisco.com
+  skip_cleanup: true
+  on:
+    branch: master
+    repo: asciidisco/serveit2
