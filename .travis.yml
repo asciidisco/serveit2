@@ -1,7 +1,14 @@
 language: node_js
 sudo: false
+notifications:
+  email: false
+cache:
+  directories:
+    - node_modules
 node_js:
-- '5'
-script: npm run ci
-after_script: node ./node_modules/codeclimate-test-reporter/bin/codeclimate.js < coverage/lcov.info
-after_success: npm run semantic-release
+  - '5'
+script:
+  - npm run ci
+after_success:
+  - npm run report-cover
+  - npm run semantic-release

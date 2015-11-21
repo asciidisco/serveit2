@@ -1,11 +1,13 @@
 {
   "name": "serveit2",
+  "version": "0.0.0-semantically-released",
   "description": "Quick and dirty static HTTP2 server",
   "main": "index.js",
   "bin": "./cli.js",
   "preferglobal": true,
-  "author": "Sebastian Golasch <public@asciidisco.com>",
+  "author": "Sebastian Golasch <public@asciidisco.com> (http://asciidisco.com/)",
   "license": "MIT",
+  "homepage": "https://github.com/asciidisco/serveit2#readme",
   "keywords": [
     "http2",
     "spdy",
@@ -16,11 +18,16 @@
     "type": "git",
     "url": "https://github.com/asciidisco/serveit2.git"
   },
+  "bugs": {
+    "url": "https://github.com/asciidisco/serveit2/issues"
+  },
   "scripts": {
     "test": "tape test.js",
     "cover": "istanbul cover tape -- test.js",
+    "report-cover": "node ./node_modules/codeclimate-test-reporter/bin/codeclimate.js < coverage/lcov.info",
     "lint": "eslint *.js",
     "styleguide": "jscs *.js",
+    "commit": "git-cz",
     "ci": "npm run styleguide && npm run lint && npm test && npm run cover",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
@@ -31,6 +38,12 @@
       "pre-push": "npm test",
       "post-merge": "npm install",
       "post-rewrite": "npm install"
+    },
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    },
+    "release": {
+      "verifyRelease": "cracks"
     }
   },
   "dependencies": {
@@ -43,12 +56,13 @@
   },
   "devDependencies": {
     "codeclimate-test-reporter": "^0.1.1",
+    "cz-conventional-changelog": "^1.1.4",
     "eslint": "^1.9.0",
     "ghooks": "^1.0.0",
     "istanbul": "^0.4.0",
     "jscs": "^2.6.0",
+    "semantic-release": "^4.3.5",
     "tape": "^4.2.2",
-    "validate-commit-message": "^3.0.1",
-    "semantic-release": "^4.3.5"
+    "validate-commit-message": "^3.0.1"
   }
 }
