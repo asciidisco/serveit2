@@ -1,13 +1,17 @@
 {
   "name": "serveit2",
-  "version": "1.2.0",
   "description": "Quick and dirty static HTTP2 server",
   "main": "index.js",
   "bin": "./cli.js",
   "preferglobal": true,
   "author": "Sebastian Golasch <public@asciidisco.com>",
   "license": "MIT",
-  "keywords": ["http2", "spdy", "server", "static"],
+  "keywords": [
+    "http2",
+    "spdy",
+    "server",
+    "static"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/asciidisco/serveit2.git"
@@ -17,7 +21,8 @@
     "cover": "istanbul cover tape -- test.js",
     "lint": "eslint *.js",
     "styleguide": "jscs *.js",
-    "ci": "npm run styleguide && npm run lint && npm test && npm run cover"
+    "ci": "npm run styleguide && npm run lint && npm test && npm run cover",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "config": {
     "ghooks": {
@@ -43,6 +48,7 @@
     "istanbul": "^0.4.0",
     "jscs": "^2.6.0",
     "tape": "^4.2.2",
-    "validate-commit-message": "^3.0.1"
+    "validate-commit-message": "^3.0.1",
+    "semantic-release": "^4.3.5"
   }
 }
