@@ -62,7 +62,7 @@
     "eslint": "^1.9.0",
     "ghooks": "^1.0.0",
     "istanbul": "^0.4.0",
-    "jscs": "^2.6.0",
+    "jscs": "^3.0.2",
     "semantic-release": "^4.3.5",
     "tape": "^4.2.2",
     "validate-commit-message": "^3.0.1"
