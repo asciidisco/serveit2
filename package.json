@@ -57,7 +57,7 @@
     "spdy-keys": "0.0.0"
   },
   "devDependencies": {
-    "codeclimate-test-reporter": "^0.1.1",
+    "codeclimate-test-reporter": "^0.4.0",
     "cz-conventional-changelog": "^1.1.5",
     "eslint": "^1.9.0",
     "ghooks": "^1.0.0",
