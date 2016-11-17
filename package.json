@@ -63,7 +63,7 @@
     "ghooks": "^1.0.0",
     "istanbul": "^0.4.0",
     "jscs": "^2.6.0",
-    "semantic-release": "^4.3.5",
+    "semantic-release": "^6.3.2",
     "tape": "^4.2.2",
     "validate-commit-message": "^3.0.1"
   }
