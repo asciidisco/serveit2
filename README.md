@@ -4,6 +4,7 @@ Quick &amp; dirty static HTTP2 server
 [![Code Climate](https://codeclimate.com/github/asciidisco/serveit2/badges/gpa.svg)](https://codeclimate.com/github/asciidisco/serveit2)
 [![Test Coverage](https://codeclimate.com/github/asciidisco/serveit2/badges/coverage.svg)](https://codeclimate.com/github/asciidisco/serveit2/coverage)
 [![Issue Count](https://codeclimate.com/github/asciidisco/serveit2/badges/issue_count.svg)](https://codeclimate.com/github/asciidisco/serveit2)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fasciidisco%2Fserveit2.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fasciidisco%2Fserveit2?ref=badge_shield)
 
 ## Installation
 
@@ -112,3 +113,6 @@ everything than can be set programmatically or via the cmd can also be set via t
 ## License
 
 MIT
+
+
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fasciidisco%2Fserveit2.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fasciidisco%2Fserveit2?ref=badge_large)
