@@ -1,4 +1,6 @@
 # serveit2
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/asciidisco/serveit2.svg)](https://greenkeeper.io/)
 Quick &amp; dirty static HTTP2 server
 
 [![Code Climate](https://codeclimate.com/github/asciidisco/serveit2/badges/gpa.svg)](https://codeclimate.com/github/asciidisco/serveit2)
