@@ -51,7 +51,7 @@
   "dependencies": {
     "ecstatic": "^3.1.1",
     "meow": "^4.0.0",
-    "mime": "^2.2.0",
+    "mime": "^2.3.1",
     "morgan": "^1.6.1",
     "spdy": "^3.0.0",
     "spdy-keys": "0.0.0"
